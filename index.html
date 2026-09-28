@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product information catalog table with individual detail sections for each product.">
+  <title>Product Catalog & Detailed Specifications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <span class="badge-tag">Inventory Overview</span>
+      <h1>Product Catalog</h1>
+      <p>Browse our list of products in the table below. Click "View Details" to jump to each product's full section.</p>
+    </header>
+
+    <!-- Product Summary Table Section -->
+    <section id="catalog-table" class="table-section">
+      <div class="table-card">
+        <div class="table-wrapper">
+          <table class="product-table">
+            <caption>Available Products Overview</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Category</th>
+                <th scope="col">Price</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="id-col">#PRD-101</td>
+                <td>
+                  <div class="product-cell">
+                    <span class="product-icon">📱</span>
+                    <div>
+                      <a href="#prd-101" class="table-product-title">iPhone 15 Pro</a>
+                      <span class="product-meta">128GB, Natural Titanium</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="brand-col">Apple</td>
+                <td>Electronics</td>
+                <td class="price-col">$999.00</td>
+                <td><span class="status-badge in-stock">In Stock</span></td>
+                <td><a href="#prd-101" class="view-btn">View Details &darr;</a></td>
+              </tr>
+
+              <tr>
+                <td class="id-col">#PRD-102</td>
+                <td>
+                  <div class="product-cell">
+                    <span class="product-icon">🎧</span>
+                    <div>
+                      <a href="#prd-102" class="table-product-title">WH-1000XM5</a>
+                      <span class="product-meta">Noise Canceling Headphones</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="brand-col">Sony</td>
+                <td>Audio</td>
+                <td class="price-col">$398.00</td>
+                <td><span class="status-badge in-stock">In Stock</span></td>
+                <td><a href="#prd-102" class="view-btn">View Details &darr;</a></td>
+              </tr>
+
+              <tr>
+                <td class="id-col">#PRD-103</td>
+                <td>
+                  <div class="product-cell">
+                    <span class="product-icon">💻</span>
+                    <div>
+                      <a href="#prd-103" class="table-product-title">XPS 15 Laptop</a>
+                      <span class="product-meta">Intel Core i7, 16GB RAM</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="brand-col">Dell</td>
+                <td>Computers</td>
+                <td class="price-col">$1,499.00</td>
+                <td><span class="status-badge low-stock">Low Stock</span></td>
+                <td><a href="#prd-103" class="view-btn">View Details &darr;</a></td>
+              </tr>
+
+              <tr>
+                <td class="id-col">#PRD-104</td>
+                <td>
+                  <div class="product-cell">
+                    <span class="product-icon">👟</span>
+                    <div>
+                      <a href="#prd-104" class="table-product-title">Air Zoom Pegasus 40</a>
+                      <span class="product-meta">Men's Road Running Shoes</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="brand-col">Nike</td>
+                <td>Footwear</td>
+                <td class="price-col">$130.00</td>
+                <td><span class="status-badge in-stock">In Stock</span></td>
+                <td><a href="#prd-104" class="view-btn">View Details &darr;</a></td>
+              </tr>
+
+              <tr>
+                <td class="id-col">#PRD-105</td>
+                <td>
+                  <div class="product-cell">
+                    <span class="product-icon">⌚</span>
+                    <div>
+                      <a href="#prd-105" class="table-product-title">Galaxy Watch 6</a>
+                      <span class="product-meta">Bluetooth 44mm, Graphite</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="brand-col">Samsung</td>
+                <td>Wearables</td>
+                <td class="price-col">$299.99</td>
+                <td><span class="status-badge out-of-stock">Out of Stock</span></td>
+                <td><a href="#prd-105" class="view-btn">View Details &darr;</a></td>
+              </tr>
+
+              <tr>
+                <td class="id-col">#PRD-106</td>
+                <td>
+                  <div class="product-cell">
+                    <span class="product-icon">📷</span>
+                    <div>
+                      <a href="#prd-106" class="table-product-title">EOS R50 Mirrorless</a>
+                      <span class="product-meta">Compact 4K Content Camera</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="brand-col">Canon</td>
+                <td>Photography</td>
+                <td class="price-col">$679.99</td>
+                <td><span class="status-badge in-stock">In Stock</span></td>
+                <td><a href="#prd-106" class="view-btn">View Details &darr;</a></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4" class="tfoot-label">Total Listed Products:</td>
+                <td colspan="3" class="tfoot-value">6 Items Available</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Individual Product Detail Sections -->
+    <div class="details-wrapper">
+      <div class="details-section-heading">
+        <h2>Detailed Product Information</h2>
+        <p>Complete specifications and in-depth descriptions for each product.</p>
+      </div>
+
+      <!-- Section: Product 1 -->
+      <section id="prd-101" class="product-detail-section">
+        <div class="detail-card-header">
+          <div class="detail-title-group">
+            <span class="detail-icon">📱</span>
+            <div>
+              <span class="detail-id">PRD-101</span>
+              <h3>iPhone 15 Pro</h3>
+              <span class="detail-brand">By Apple</span>
+            </div>
+          </div>
+          <div class="detail-price-status">
+            <span class="detail-price">$999.00</span>
+            <span class="status-badge in-stock">In Stock</span>
+          </div>
+        </div>
+
+        <div class="detail-body">
+          <p class="detail-desc">
+            Forged in aerospace-grade titanium and featuring the groundbreaking A17 Pro chip, customizable Action button, and a powerful pro-class camera system with 48MP main sensor.
+          </p>
+
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Category</span>
+              <span class="spec-value">Electronics / Smartphones</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Processor</span>
+              <span class="spec-value">Apple A17 Pro (3nm)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Display</span>
+              <span class="spec-value">6.1" Super Retina XDR OLED</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Storage</span>
+              <span class="spec-value">128GB NVMe</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Warranty</span>
+              <span class="spec-value">1 Year Official Apple Warranty</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Customer Rating</span>
+              <span class="spec-value">★ 4.9 / 5.0 (240 reviews)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-footer">
+          <a href="#catalog-table" class="back-link">&uarr; Back to Product Table</a>
+        </div>
+      </section>
+
+      <!-- Section: Product 2 -->
+      <section id="prd-102" class="product-detail-section">
+        <div class="detail-card-header">
+          <div class="detail-title-group">
+            <span class="detail-icon">🎧</span>
+            <div>
+              <span class="detail-id">PRD-102</span>
+              <h3>WH-1000XM5 Headphones</h3>
+              <span class="detail-brand">By Sony</span>
+            </div>
+          </div>
+          <div class="detail-price-status">
+            <span class="detail-price">$398.00</span>
+            <span class="status-badge in-stock">In Stock</span>
+          </div>
+        </div>
+
+        <div class="detail-body">
+          <p class="detail-desc">
+            Industry-leading noise cancellation engineered with two processors and 8 microphones for unparalleled quiet. Features crystal-clear hands-free calling and an ultra-comfortable lightweight design.
+          </p>
+
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Category</span>
+              <span class="spec-value">Audio / Headphones</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Battery Life</span>
+              <span class="spec-value">Up to 30 Hours (Quick Charge)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Connectivity</span>
+              <span class="spec-value">Bluetooth 5.2 / Multipoint</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Weight</span>
+              <span class="spec-value">250 grams</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Warranty</span>
+              <span class="spec-value">1 Year Sony Manufacturer Warranty</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Customer Rating</span>
+              <span class="spec-value">★ 4.8 / 5.0 (185 reviews)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-footer">
+          <a href="#catalog-table" class="back-link">&uarr; Back to Product Table</a>
+        </div>
+      </section>
+
+      <!-- Section: Product 3 -->
+      <section id="prd-103" class="product-detail-section">
+        <div class="detail-card-header">
+          <div class="detail-title-group">
+            <span class="detail-icon">💻</span>
+            <div>
+              <span class="detail-id">PRD-103</span>
+              <h3>XPS 15 Laptop</h3>
+              <span class="detail-brand">By Dell</span>
+            </div>
+          </div>
+          <div class="detail-price-status">
+            <span class="detail-price">$1,499.00</span>
+            <span class="status-badge low-stock">Low Stock</span>
+          </div>
+        </div>
+
+        <div class="detail-body">
+          <p class="detail-desc">
+            A masterclass in portable performance featuring a high-resolution 15.6-inch InfinityEdge display, 13th Gen Intel Core processor, and premium CNC machined aluminum chassis.
+          </p>
+
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Category</span>
+              <span class="spec-value">Computers / Laptops</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Processor</span>
+              <span class="spec-value">Intel Core i7-13700H</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Memory</span>
+              <span class="spec-value">16GB DDR5 Dual Channel</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Storage</span>
+              <span class="spec-value">512GB PCIe NVMe SSD</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Warranty</span>
+              <span class="spec-value">2 Years Dell Premium Support</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Customer Rating</span>
+              <span class="spec-value">★ 4.6 / 5.0 (92 reviews)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-footer">
+          <a href="#catalog-table" class="back-link">&uarr; Back to Product Table</a>
+        </div>
+      </section>
+
+      <!-- Section: Product 4 -->
+      <section id="prd-104" class="product-detail-section">
+        <div class="detail-card-header">
+          <div class="detail-title-group">
+            <span class="detail-icon">👟</span>
+            <div>
+              <span class="detail-id">PRD-104</span>
+              <h3>Air Zoom Pegasus 40</h3>
+              <span class="detail-brand">By Nike</span>
+            </div>
+          </div>
+          <div class="detail-price-status">
+            <span class="detail-price">$130.00</span>
+            <span class="status-badge in-stock">In Stock</span>
+          </div>
+        </div>
+
+        <div class="detail-body">
+          <p class="detail-desc">
+            A springy ride for every run, Pegasus's familiar, just-for-you feel returns to help you accomplish your fitness goals with tuned support and balanced responsiveness.
+          </p>
+
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Category</span>
+              <span class="spec-value">Footwear / Running</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Cushioning</span>
+              <span class="spec-value">Nike React Foam + 2 Zoom Air units</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Upper Material</span>
+              <span class="spec-value">Single-layer engineered mesh</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Sizes Available</span>
+              <span class="spec-value">US 7 to 13 (Regular & Wide)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Warranty</span>
+              <span class="spec-value">Nike 2-Year Limited Footwear Warranty</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Customer Rating</span>
+              <span class="spec-value">★ 4.7 / 5.0 (310 reviews)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-footer">
+          <a href="#catalog-table" class="back-link">&uarr; Back to Product Table</a>
+        </div>
+      </section>
+
+      <!-- Section: Product 5 -->
+      <section id="prd-105" class="product-detail-section">
+        <div class="detail-card-header">
+          <div class="detail-title-group">
+            <span class="detail-icon">⌚</span>
+            <div>
+              <span class="detail-id">PRD-105</span>
+              <h3>Galaxy Watch 6</h3>
+              <span class="detail-brand">By Samsung</span>
+            </div>
+          </div>
+          <div class="detail-price-status">
+            <span class="detail-price">$299.99</span>
+            <span class="status-badge out-of-stock">Out of Stock</span>
+          </div>
+        </div>
+
+        <div class="detail-body">
+          <p class="detail-desc">
+            Track workouts, improve sleep quality, and monitor heart health with an ultra-durable sapphire crystal screen and a slim bezel design that fits any daily style.
+          </p>
+
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Category</span>
+              <span class="spec-value">Wearables / Smartwatch</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Case Size</span>
+              <span class="spec-value">44mm Armor Aluminum</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Water Resistance</span>
+              <span class="spec-value">5ATM + IP68 / MIL-STD-810H</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Sensors</span>
+              <span class="spec-value">BioActive (ECG, HR, BIA), Temp</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Warranty</span>
+              <span class="spec-value">1 Year Samsung Limited Warranty</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Customer Rating</span>
+              <span class="spec-value">★ 4.5 / 5.0 (140 reviews)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-footer">
+          <a href="#catalog-table" class="back-link">&uarr; Back to Product Table</a>
+        </div>
+      </section>
+
+      <!-- Section: Product 6 -->
+      <section id="prd-106" class="product-detail-section">
+        <div class="detail-card-header">
+          <div class="detail-title-group">
+            <span class="detail-icon">📷</span>
+            <div>
+              <span class="detail-id">PRD-106</span>
+              <h3>EOS R50 Mirrorless Camera</h3>
+              <span class="detail-brand">By Canon</span>
+            </div>
+          </div>
+          <div class="detail-price-status">
+            <span class="detail-price">$679.99</span>
+            <span class="status-badge in-stock">In Stock</span>
+          </div>
+        </div>
+
+        <div class="detail-body">
+          <p class="detail-desc">
+            Designed for active content creators, the EOS R50 combines a lightweight, compact body with a 24.2 Megapixel sensor, 4K video recording, and Dual Pixel CMOS AF II.
+          </p>
+
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Category</span>
+              <span class="spec-value">Photography / Mirrorless</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Sensor</span>
+              <span class="spec-value">24.2MP APS-C CMOS</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Video</span>
+              <span class="spec-value">4K uncropped 30p (oversampled from 6K)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Autofocus</span>
+              <span class="spec-value">Dual Pixel AF II with Subject Detection</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Warranty</span>
+              <span class="spec-value">1 Year Canon USA Warranty</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Customer Rating</span>
+              <span class="spec-value">★ 4.8 / 5.0 (78 reviews)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-footer">
+          <a href="#catalog-table" class="back-link">&uarr; Back to Product Table</a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

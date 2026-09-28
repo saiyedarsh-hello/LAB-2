@@ -1,0 +1,458 @@
+/* Design Tokens & Reset */
+:root {
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-light: #eff6ff;
+
+  --success-bg: #ecfdf5;
+  --success-text: #059669;
+  --warning-bg: #fffbeb;
+  --warning-text: #d97706;
+  --danger-bg: #fef2f2;
+  --danger-text: #dc2626;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  padding: 3rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Page Header */
+.header {
+  margin-bottom: 2rem;
+}
+
+.badge-tag {
+  display: inline-block;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+}
+
+/* Table Section & Card */
+.table-section {
+  margin-bottom: 3.5rem;
+}
+
+.table-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.product-table caption {
+  caption-side: top;
+  text-align: left;
+  padding: 1.1rem 1.25rem;
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 1.05rem;
+  border-bottom: 1px solid var(--border-color);
+  background: #ffffff;
+}
+
+.product-table thead {
+  background-color: #f1f5f9;
+}
+
+.product-table th {
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.product-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+  color: #334155;
+}
+
+.product-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.product-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Table Specific Cell Styles */
+.id-col {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.product-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.table-product-title {
+  display: block;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.table-product-title:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.product-meta {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.brand-col {
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.price-col {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-badge.in-stock {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+}
+
+.status-badge.low-stock {
+  background-color: var(--warning-bg);
+  color: var(--warning-text);
+}
+
+.status-badge.out-of-stock {
+  background-color: var(--danger-bg);
+  color: var(--danger-text);
+}
+
+/* View Details Button Link */
+.view-btn {
+  display: inline-block;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.view-btn:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+/* Table Footer */
+.product-table tfoot td {
+  padding: 0.95rem 1.25rem;
+  background-color: #fbfcfe;
+  font-size: 0.85rem;
+  border-bottom: none;
+}
+
+.tfoot-label {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.tfoot-value {
+  text-align: right;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Detailed Product Sections */
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.details-section-heading {
+  margin-bottom: 0.5rem;
+}
+
+.details-section-heading h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.details-section-heading p {
+  color: var(--text-muted);
+  font-size: 0.925rem;
+}
+
+/* Individual Product Detail Section Card */
+.product-detail-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  scroll-margin-top: 2rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Target highlight when jumped to via anchor link */
+.product-detail-section:target {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15), var(--shadow-lg);
+}
+
+.detail-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.detail-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.detail-id {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.detail-title-group h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+.detail-brand {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.detail-price-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+
+.detail-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* Detail Body & Specs Grid */
+.detail-body {
+  padding-top: 1.25rem;
+}
+
+.detail-desc {
+  font-size: 0.95rem;
+  color: #334155;
+  margin-bottom: 1.5rem;
+  line-height: 1.65;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  background-color: #f8fafc;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #edf2f7;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.spec-label {
+  font-size: 0.725rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.spec-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Detail Footer & Back to Table Link */
+.detail-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.back-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.15s ease;
+}
+
+.back-link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  body {
+    padding: 1.5rem 0.85rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .detail-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .detail-price-status {
+    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
